@@ -51,8 +51,8 @@ function mouseMove(event: MouseEvent) {
   for (let i = 0; i < props.count; i++) {
     const d = dots[i];
     setTimeout(() => {
-      d.x += (mousePosition.x - d.x) * 0.2;
-      d.y += (mousePosition.y - d.y) * 0.2;
+      d.x += (mousePosition.x - d.x) * props.speed;
+      d.y += (mousePosition.y - d.y) * props.speed;
     }, i * 100);
   }
 }

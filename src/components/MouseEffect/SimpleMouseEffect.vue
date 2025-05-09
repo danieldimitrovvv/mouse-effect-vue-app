@@ -6,7 +6,8 @@
       :key="i"
       :style="{
         opacity: 1 - i * 0.2,
-        transform: `translate(${dot.x - size / 2}px, ${dot.y - size / 2}px)`,
+        left: `${dot.x}px`,
+        top: `${dot.y}px`,
       }"
     ></span>
   </div>
@@ -26,8 +27,8 @@ function mouseMove(event: MouseEvent) {
   for (let i = 0; i < numDots; i++) {
     const d = dots[i];
     setTimeout(() => {
-      d.x += (mousePosition.x - d.x) * 0.2;
-      d.y += (mousePosition.y - d.y) * 0.2;
+      d.x += mousePosition.x - d.x;
+      d.y += mousePosition.y - d.y;
     }, i * delay);
   }
 }
@@ -48,6 +49,7 @@ function mouseMove(event: MouseEvent) {
   background: cyan;
   width: v-bind(size + "px");
   height: v-bind(size + "px");
+  transform: translate(-50%, -50%);
   border-radius: 50%;
 }
 </style>
