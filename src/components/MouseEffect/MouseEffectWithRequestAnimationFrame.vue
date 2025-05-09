@@ -4,7 +4,8 @@
     :style="{ backgroundColor }"
     @mousemove="mouseMove"
   >
-    <h2 class="title">request Animation Frame DEMO</h2>
+    <MouseEffectTitle title="request Animation Frame DEMO" />
+
     <div
       v-for="(dot, index) in dots"
       :key="index"
@@ -29,6 +30,8 @@ import {
   defineProps,
   watch,
 } from "vue";
+import MouseEffectTitle from "./MouseEffectTitle";
+
 import { IMouseEffectProps, defaultMouseEffectProps } from "./MouseEffectProps";
 import { StyleUtil } from "../../utilities/StyleUtil";
 

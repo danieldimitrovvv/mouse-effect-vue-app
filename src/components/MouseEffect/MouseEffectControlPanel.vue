@@ -136,10 +136,10 @@ watch(
   position: fixed;
   top: 10px;
   right: 10px;
-  width: 250px;
+  width: 280px;
   height: 46px;
   overflow: hidden;
-  gap: 15px;
+  gap: 5px;
   background-color: #fff;
   border: 1px solid #222;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -147,7 +147,7 @@ watch(
   transition: 0.5s;
 }
 .control-panel.open {
-  height: 400px;
+  height: 380px;
 }
 
 .control-panel .content {
@@ -182,8 +182,8 @@ input[type="text"],
 input[type="number"] {
   width: 100%;
   flex: 1;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 6px 10px;
+  margin: 0;
   box-sizing: border-box;
   min-width: 0;
   border-radius: 15px;
@@ -198,7 +198,7 @@ input[type="button"] {
   color: white;
   padding: 16px 32px;
   text-decoration: none;
-  margin: 4px 2px;
+  margin: 2px;
   cursor: pointer;
   border-radius: 10px;
 }

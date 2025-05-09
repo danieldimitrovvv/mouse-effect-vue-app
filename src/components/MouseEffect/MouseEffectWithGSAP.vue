@@ -4,7 +4,7 @@
     :style="{ backgroundColor }"
     @mousemove="mouseMove"
   >
-    <h2 class="title">GSAP DEMO</h2>
+    <MouseEffectTitle title="GSAP DEMO" />
     <div class="cursor-effect">
       <span
         v-for="(dot, i) in dots"
@@ -24,6 +24,7 @@ import gsap from "gsap";
 import { reactive, withDefaults, defineProps, watch, ref } from "vue";
 
 import { IMouseEffectProps, defaultMouseEffectProps } from "./MouseEffectProps";
+import MouseEffectTitle from "./MouseEffectTitle";
 import { StyleUtil } from "../../utilities/StyleUtil";
 
 const props = withDefaults(defineProps<IMouseEffectProps>(), {
@@ -99,17 +100,6 @@ watch(
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.mouse-effect .title {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: white;
 }
 
 .cursor-effect span {
