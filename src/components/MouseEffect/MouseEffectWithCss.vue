@@ -48,10 +48,7 @@ const styleObject = ref({
 
 function mouseMove(event: MouseEvent) {
   const mousePosition = { x: event.clientX, y: event.clientY };
-  dots[0].x = mousePosition.x;
-  dots[0].y = mousePosition.y;
-
-  for (let i = 1; i < props.count; i++) {
+  for (let i = 0; i < props.count; i++) {
     const d = dots[i];
     setTimeout(() => {
       d.x += (mousePosition.x - d.x) * 0.2;
